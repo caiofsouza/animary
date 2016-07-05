@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Teste Animação</title>
+	<link rel="stylesheet" href="">
+
+	<link rel="stylesheet" href="styles.css" type="text/css">
+
+	<script src="scripts.js" type="text/javascript"></script>
+</head>
+<body>
+
+	<div class="animary-container">
+		<div class="triangle-circle-animary left-triangle"></div>
+		<div class="triangle-circle-animary right-triangle"></div>
+	</div>
+	<div class="animary-container">
+		<div class="battery-bar"></div>
+	</div>
+	<div class="animary-container">
+		<div class="circle-tunning"></div>
+	</div>
+
+
+	<script type="text/javascript">
+		window.onload = function(){
+
+			var animary = new Animary();
+
+			animary.triangleAnimation('.triangle-circle-animary');
+			animary.batteryBar('.battery-bar');
+			animary.circleTunning('.circle-tunning');
+		};
+	</script>
+</body>
+</html>
