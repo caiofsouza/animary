@@ -41,5 +41,12 @@ var Animary = function(){
 };
 
 
+var animary = new Animary();
+
+animary.triangleAnimation('.triangle-circle-animary');
+animary.batteryBar('.battery-bar');
+animary.circleTunning('.circle-tunning');
+
+
 
 
