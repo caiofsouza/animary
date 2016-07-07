@@ -1,15 +1,16 @@
-'use strict';
-// Animation Gif Library
-// Animary
-var Animary = function(){
+// Loading Animations Library
 
+// Author: Caio Fernandes
+// Github: https://github.com/caiofsouza/animary
+
+'use strict';
+var Animary = function(){
 
 
 	this.triangleAnimation = function(elem){
 		this.addClass(elem+'.left-triangle', 'animary-triangle-circle-left');
 		this.addClass(elem+'.right-triangle', 'animary-triangle-circle-right');
 	};
-
 
 	this.batteryBar = function(elem){
 		var bar = document.createElement('div');
@@ -20,10 +21,6 @@ var Animary = function(){
 	this.circleTunning = function(elem){
 		this.addClass(elem, 'animary-circle-tunning');
 	}
-
-
-
-
 
 	// HELPER FUNCTIONS
 	this.getClasses = function(elem){
@@ -40,12 +37,13 @@ var Animary = function(){
 	return this; 
 };
 
-
 var animary = new Animary();
 
 animary.triangleAnimation('.triangle-circle-animary');
 animary.batteryBar('.battery-bar');
 animary.circleTunning('.circle-tunning');
+
+console.log(animary);
 
 
 
