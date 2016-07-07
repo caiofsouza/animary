@@ -34,6 +34,10 @@ var Animary = function(){
 		this.addClass(elem, 'animary-pacman');
 	};
 
+	this.circleSpace = function(elem){
+		this.addClass(elem, 'animary-circle-space');
+	};
+
 	// HELPER FUNCTIONS
 	this.getClasses = function(elem){
 		return document.querySelector(elem).className;
@@ -57,6 +61,7 @@ animary.circleTunning('.circle-tunning');
 animary.circleTunningTwo('.circle-tunning-two');
 animary.diamondFloat('.diamond-float');
 animary.pacman('.pacman');
+animary.circleSpace('.circle-space');
 
 console.log(animary);
 
