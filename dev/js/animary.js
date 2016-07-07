@@ -20,7 +20,19 @@ var Animary = function(){
 
 	this.circleTunning = function(elem){
 		this.addClass(elem, 'animary-circle-tunning');
-	}
+	};
+
+	this.circleTunningTwo = function(elem){
+		this.addClass(elem, 'animary-circle-tunning-two');
+	};
+
+	this.diamondFloat = function(elem){
+		this.addClass(elem, 'animary-diamond-float');
+	};
+
+	this.pacman = function(elem){
+		this.addClass(elem, 'animary-pacman');
+	};
 
 	// HELPER FUNCTIONS
 	this.getClasses = function(elem){
@@ -42,6 +54,9 @@ var animary = new Animary();
 animary.triangleAnimation('.triangle-circle-animary');
 animary.batteryBar('.battery-bar');
 animary.circleTunning('.circle-tunning');
+animary.circleTunningTwo('.circle-tunning-two');
+animary.diamondFloat('.diamond-float');
+animary.pacman('.pacman');
 
 console.log(animary);
 
