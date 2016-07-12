@@ -84,6 +84,6 @@ module.exports = function(grunt) {
 	});
 
 
-	grunt.registerTask('default', ['less, cssmin, uglify, htmlmin']);
+	grunt.registerTask('build', ['less', 'cssmin', 'uglify', 'htmlmin', 'watch']);
 
 }

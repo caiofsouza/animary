@@ -1,11 +1,10 @@
 // Loading Animations Library
 
 // Author: Caio Fernandes
-// Github: https://github.com/caiofsouza/animary
+// GitHub: https://github.com/caiofsouza/animary
 
 'use strict';
 var Animary = function(){
-
 
 	this.triangleAnimation = function(elem){
 		this.addClass(elem+'.left-triangle', 'animary-triangle-circle-left');
@@ -38,6 +37,10 @@ var Animary = function(){
 		this.addClass(elem, 'animary-circle-space');
 	};
 
+	this.circleSquare = function(elem){
+		this.addClass(elem, 'animary-circle-square');
+	};
+
 	// HELPER FUNCTIONS
 	this.getClasses = function(elem){
 		return document.querySelector(elem).className;
@@ -48,7 +51,6 @@ var Animary = function(){
 		var formatted_classes = new_classes.replace(/\s/gi, '');
 		document.querySelector(elem).className = current_classes + ' ' + formatted_classes;
 	}
-
 
 	return this; 
 };
@@ -62,9 +64,7 @@ animary.circleTunningTwo('.circle-tunning-two');
 animary.diamondFloat('.diamond-float');
 animary.pacman('.pacman');
 animary.circleSpace('.circle-space');
-
-console.log(animary);
-
+animary.circleSquare('.circle-square');
 
 
 

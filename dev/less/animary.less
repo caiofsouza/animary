@@ -1,23 +1,5 @@
-@primary_green: #90ee90; // lightgreen
-@primary_pink: #ffb6c1; // lightpink
-
-*{
-	margin:0;
-	padding:0;
-	box-sizing: border-box;
-}
-.animary-container{
-	margin:40px;
-	float:left;
-	width:260px;
-	height:200px;
-	margin-left:15px;
-	box-shadow: 1px 1px 1px 1px #e7e7e7;
-	border:1px solid #cccccc;
-	padding:40px;
-	position:relative;
-}
-
+@primary_color: #90ee90; // lightgreen
+@second_color: #ffb6c1; // lightpink
 
 /* 
 ============================================================================
@@ -31,13 +13,13 @@
 
     &.left-triangle{
 		transform:scale(1);
-		border-bottom: 50px solid @primary_pink;
+		border-bottom: 50px solid @second_color;
 		left:0px;
     }
 
     &.right-triangle{
     	transform:scale(2);
-		border-bottom: 50px solid @primary_green;
+		border-bottom: 50px solid @primary_color;
 		left:80px;
     }
 }
@@ -139,7 +121,7 @@
     top: 0px;
     width:0;
     height: 100%;
-    background-color: @primary_green;
+    background-color: @primary_color;
     z-index: 10;
     animation:bar-animary 1.2s infinite linear;
 }
@@ -184,8 +166,8 @@
 	height:70px;
 	background-color:transparent;
 	border-radius:100%;
-	border-right:35px @primary_pink solid;
-	border-left:35px @primary_green solid;
+	border-right:35px @second_color solid;
+	border-left:35px @primary_color solid;
 	animation: circle-tunning-animary 1.2s infinite ease-in-out;
 }
 
@@ -194,7 +176,7 @@
 		transform:rotate(0deg);
 	}
 	100%{
-		transform:rotate(-360deg);
+		transform:rotate(360deg);
 	}
 }
 
@@ -217,7 +199,7 @@
 
 .animary-circle-tunning-two{
     position: relative;
-    background: linear-gradient(@primary_pink, transparent);
+    background: linear-gradient(@second_color, transparent);
     -webkit-border-radius: 50px;
     -moz-border-radius: 50px;
     border-radius: 50%;
@@ -282,7 +264,7 @@
 	height: 0;
 	top:0px;
 	border: 20px solid transparent;
-    border-bottom: 30px solid @primary_green;
+    border-bottom: 30px solid @primary_color;
 	position: relative;
 	animation: diamond-float-animary 1s infinite ease-in-out;
 }
@@ -294,7 +276,7 @@
     width: 0;
     height: 0;
     border: 20px solid transparent;
-    border-top: 30px solid @primary_green;
+    border-top: 30px solid @primary_color;
 }
 
 @keyframes diamond-float-animary{
@@ -327,9 +309,9 @@
 	width: 0px;
 	height: 0px;
 	border-right: 60px solid transparent;
-	border-top: 60px solid @primary_pink;
-	border-left: 60px solid @primary_pink;
-	border-bottom: 60px solid @primary_pink;
+	border-top: 60px solid @second_color;
+	border-left: 60px solid @second_color;
+	border-bottom: 60px solid @second_color;
 	border-top-left-radius: 60px;
 	border-top-right-radius: 60px;
 	border-bottom-left-radius: 60px;
@@ -355,7 +337,7 @@
 
 /* 
 ============================================================================
-================================= diamond FLOAT =============================
+================================ DIAMOND FLOAT =============================
 ============================================================================ 
 */
 
@@ -364,7 +346,7 @@
 	height:50px;
 	top:30px;
 	left:30px;
-	border:2px solid @primary_pink;
+	border:2px solid @second_color;
 	border-radius: 100%;
 	perpective:600;
 	position: relative;
@@ -376,21 +358,69 @@
 	    left: -12px;
 	    width: 70px;
 	    height: 100px;
-	    border: 2px solid @primary_green;
+	    border: 3px solid @primary_color;
 	    border-radius: 100%;
 	    box-sizing: border-box;
-	    animation: circle-space-animary .6s infinite ease-in-out;
+	    animation: circle-space-animaryY .6s infinite ease-in-out;
 	}
 }
 
-
-@keyframes circle-space-animary{
+@keyframes circle-space-animaryY{
 	100%{
 		transform:rotateY(180deg);
 	}
 
 }
 
+
+
+/* 
+============================================================================
+==================================== END ===================================
+============================================================================ 
+*/
+
+
+/* 
+============================================================================
+============================= CIRCLE SQUARE FLOAT ==========================
+============================================================================ 
+*/
+
+.animary-circle-square {
+	width:16px;
+	height:16px;
+	top:0px;
+	left:0px;
+	background-color: @primary_color;
+	border-radius: 100%;
+	position: relative;
+	animation: circle-square-animary .4s infinite linear;
+}
+
+@keyframes circle-square-animary{
+	0%{
+		top: 0px;
+		left: 0px;
+	}
+	25%{
+		top: 0px;
+		left: 16px;
+	}
+	50%{
+		top: 16px;
+		left: 16px;
+	}
+	75%{
+		top: 16px;
+		left: 0px;
+	}
+	100%{
+		top: 0px;
+		left: 0px;
+	}
+
+}
 
 
 /* 
